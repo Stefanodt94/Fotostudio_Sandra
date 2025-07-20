@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
 </script>
 
 <footer>
@@ -8,11 +9,11 @@
     <div class="flex flex-col text-center">
       <a
         class="text-white text-extralight tracking-widest hover:text-[#B8860B] transition duration-200"
-        href="/">Impressum</a
+        href="{base}/">Impressum</a
       >
       <a
         class="text-white text-extralight tracking-widest hover:text-[#B8860B] transition duration-200"
-        href="/">Datenschutz und AGB</a
+        href="{base}/">Datenschutz und AGB</a
       >
     </div>
     <div class="flex flex-col text-white md:ml-10">

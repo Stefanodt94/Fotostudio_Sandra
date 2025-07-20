@@ -2,7 +2,13 @@
 
 html,
 body {
+  height: auto; /* NON 100% */
   overflow-x: hidden;
+  overflow-y: auto; /* assicurati che lo scroll verticale sia abilitato */
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  position: static; /* evita fixed o absolute sul body */
 }
 
 html {
@@ -25,5 +31,35 @@ span {
 .erinnerung,
 .karte,
 .title {
-  font-family: "MS Madi";
+  font-family: "Ms Madi", cursive;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(1.4);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.bild {
+  animation: scaleIn 30s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  will-change: transform;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.bildergalerie {
+  animation: fadeUp 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  will-change: transform;
 }

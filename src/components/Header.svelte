@@ -3,6 +3,7 @@
   import { page } from "$app/stores";
   import MobilNav from "./MobilNav.svelte";
   import { browser } from "$app/environment";
+  import { base } from "$app/paths";
 
   let menuOpen = false;
   let navRef;
@@ -33,9 +34,9 @@
 <header class="flex flex-col relative z-20 shadow-2xl">
   <div class="flex w-full items-center justify-between p-4 py-6 bg-black">
     <img
-      src="/assets/fotostudio.png"
+      src="{base}/assets/logo_sandra.svg"
       alt="fotostudio-logo"
-      class="w-24 h-auto"
+      class="w-60 h-auto"
     />
 
     <button
@@ -50,26 +51,26 @@
 
     <nav class="hidden md:flex items-center gap-4 lg:gap-6">
       <a
-        href="/"
+        href="{base}/"
         class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50"
         class:text-[#B8860B]={$page.url.pathname === "/"}
         class:text-white={$page.url.pathname !== "/"}>HOME</a
       >
       <a
-        href="/ueber_mich"
+        href="{base}/ueber_mich"
         class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50"
         class:text-[#B8860B]={$page.url.pathname === "/ueber_mich"}
         class:text-white={$page.url.pathname !== "/ueber_mich"}>ÜBER MICH</a
       >
       <a
-        href="/bildergalerie"
+        href="{base}/bildergalerie"
         class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50"
         class:text-[#B8860B]={$page.url.pathname === "/bildergalerie"}
         class:text-white={$page.url.pathname !== "/bildergalerie"}
         >BILDERGALERIE</a
       >
       <a
-        href="/kontakt"
+        href="{base}/kontakt"
         class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50"
         class:text-[#B8860B]={$page.url.pathname === "/kontakt"}
         class:text-white={$page.url.pathname !== "/kontakt"}>KONTAKT</a
@@ -77,5 +78,5 @@
     </nav>
   </div>
 
-  <MobilNav {menuOpen} bind:this={navRef} />
+  <MobilNav {menuOpen} bind:navRef />
 </header>

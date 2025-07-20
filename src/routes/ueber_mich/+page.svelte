@@ -1,62 +1,78 @@
 <script>
-  import Header from "../../components/Header.svelte";
   import SectionWrapper from "../../components/SectionWrapper.svelte";
-  import Footer from "../../components/Footer.svelte";
-  import { fly } from "svelte/transition";
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
+  import { base } from "$app/paths";
 
-  let visible = false;
+  onMount(async () => {
+    const { gsap } = await import("gsap");
+    const { SplitText } = await import("gsap/SplitText");
+    await tick();
 
-  onMount(() => {
-    visible = true;
+    gsap.registerPlugin(SplitText);
+
+    gsap.from("#page", {
+      autoAlpha: 0,
+      duration: 0.5,
+      ease: "expo.out",
+    });
+
+    const text = new SplitText(".satz", {
+      type: "lines",
+      lineClass: "line",
+      autoSplit: true,
+      mask: "lines",
+    });
+
+    gsap.from(text.lines, {
+      yPercent: 200,
+      autoAlpha: 0,
+      /* transformOrigin: "center bottom", */
+      stagger: {
+        each: 0.08,
+        from: "start",
+      },
+    });
   });
 </script>
 
 <main>
   <SectionWrapper>
-    <Header />
     <div
+      id="page"
       class="relative bg-dark-overlay flex flex-col md:flex-row items-center gap-8 p-8 overflow-hidden"
     >
       <img
-        src="/assets/lens.webp"
+        src="{base}/assets/lens.webp"
         alt="Sfondo Fotografia - Sandra Fotografin"
         class="absolute inset-0 object-cover w-full h-full z-[-1]"
         loading="eager"
       />
       <div class="flex-1 z-10 flex justify-center items-center">
-        {#if visible}
-          <img
-            in:fly={{ x: -200, duration: 1500 }}
-            src="/assets/sandra.webp"
-            class="w-full max-w-md rounded-lg shadow-lg"
-            alt="Sandra"
-          />
-        {/if}
+        <img
+          src="{base}/assets/sandra.webp"
+          class="w-full max-w-md rounded-lg shadow-lg"
+          alt="Sandra"
+        />
       </div>
       <div class="flex-1 z-10 text-white lg:mr-30">
-        {#if visible}
-          <h1
-            in:fly={{ y: -50, duration: 1500 }}
-            class="text-6xl md:text-8xl lg:text-10xl font-extralight mb-4 titel"
-          >
-            Hallo, ich bin Sandra!
-          </h1>
-        {/if}
-        {#if visible}
-          <p
-            in:fly={{ y: 50, duration: 1500 }}
-            class="mb-4 font-extralight tracking-widest text-xl md:text-2xl lg:text-4x"
-          >
-            Ich liebe es, besondere Momente mit meiner Kamera festzuhalten. Ob
-            Hochzeit, Familienfotos oder kreative Portraits. Ich erzähle
-            Geschichten mit Licht und Emotion.
-          </p>
-        {/if}
+        <h1
+          class="text-6xl md:text-8xl lg:text-10xl font-extralight mb-4 titel"
+        >
+          Hallo, ich bin Sandra!
+        </h1>
+
+        <p
+          class="satz mb-4 font-extralight tracking-widest text-xl md:text-2xl lg:text-4x"
+        >
+          Ich liebe es, besondere Momente mit meiner Kamera festzuhalten. Ob
+          Hochzeit, Familienfotos oder kreative Portraits. Ich erzähle
+          Geschichten mit Licht und Emotion.
+        </p>
+
         <div class="mt-10">
           <a
             class="text-white tracking-widest text-lg md:text-xl lg:text-2xl bg-transparent rounded border border-[#B8860B] active:scale-[0.95] hover:bg-[#B8860B] transition duration-200 p-4 cursor-pointer shadow-xl cursor-pointer"
-            href="/kontakt">Termin Buchen</a
+            href="{base}/kontakt">Termin Buchen</a
           >
         </div>
       </div>
@@ -119,7 +135,6 @@
         </div>
       </div>
     </div>
-    <Footer />
   </SectionWrapper>
 </main>
 

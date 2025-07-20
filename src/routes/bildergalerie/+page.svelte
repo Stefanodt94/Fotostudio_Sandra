@@ -1,18 +1,21 @@
 <script>
-  import Header from "../../components/Header.svelte";
   import SectionWrapper from "../../components/SectionWrapper.svelte";
-  import Footer from "../../components/Footer.svelte";
-  import { fly } from "svelte/transition";
-  import { images } from "../../data/image";
-  import { onMount } from "svelte";
+  import { images } from "$lib/image";
+  import { onMount, tick } from "svelte";
+  import { base } from "$app/paths";
+
+  onMount(async () => {
+    const { gsap } = await import("gsap");
+    await tick();
+
+    gsap.from("#page", {
+      autoAlpha: 0,
+      duration: 0.5,
+      ease: "expo.out",
+    });
+  });
 
   let selectedImage = null;
-
-  let visible = false;
-
-  onMount(() => {
-    visible = true;
-  });
 
   const openImage = (img) => {
     selectedImage = img;
@@ -33,12 +36,11 @@
 
 <main>
   <SectionWrapper>
-    <Header />
     <div class="h-5"></div>
 
     <div
-      in:fly={{ y: 100, duration: 1500 }}
-      class="columns-2 md:columns-3 lg:columns-4 gap-4 px-4 md:px-15"
+      id="page"
+      class="bildergalerie columns-2 md:columns-3 lg:columns-4 gap-4 px-4 md:px-15"
     >
       {#each images as img, i}
         <button
@@ -48,7 +50,7 @@
           aria-label="Open Bild {i + 1}"
         >
           <img
-            src={img.src}
+            src="{base}{img.src}"
             alt={`Bild ${i + 1}`}
             class="w-full rounded shadow-lg"
             loading="eager"
@@ -70,36 +72,35 @@
     </div>
 
     <div class="h-6"></div>
-    <Footer />
   </SectionWrapper>
-
-  {#if selectedImage}
-    <div
-      class="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
-      on:click={closeImage}
-      role="dialog"
-      aria-modal="true"
-      tabindex="0"
-      on:keydown={handleKey}
-    >
-      <!-- Questo blocca la chiusura cliccando dentro -->
-      <!-- svelte-ignore a11y_click_events_have_key_events -->
-      <!-- svelte-ignore a11y_no_static_element_interactions -->
-      <div on:click|stopPropagation class="relative">
-        <button
-          on:click={closeImage}
-          class="absolute top-2 right-2 text-white text-xl"
-          aria-label="Chiudi"
-        >
-          ✕
-        </button>
-
-        <img
-          src={selectedImage}
-          alt="Immagine"
-          class="max-w-[90vw] max-h-[90vh] border-4 border-white rounded"
-        />
-      </div>
-    </div>
-  {/if}
 </main>
+
+{#if selectedImage}
+  <div
+    class="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+    on:click={closeImage}
+    role="dialog"
+    aria-modal="true"
+    tabindex="0"
+    on:keydown={handleKey}
+  >
+    <!-- Questo blocca la chiusura cliccando dentro -->
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <div on:click|stopPropagation class="relative">
+      <button
+        on:click={closeImage}
+        class="absolute top-2 right-2 text-white text-xl"
+        aria-label="Schließe"
+      >
+        ✕
+      </button>
+
+      <img
+        src={selectedImage}
+        alt="Immagine"
+        class="max-w-[90vw] max-h-[90vh] border-4 border-white rounded"
+      />
+    </div>
+  </div>
+{/if}
