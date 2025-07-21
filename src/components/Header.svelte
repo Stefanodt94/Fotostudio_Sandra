@@ -53,27 +53,28 @@
       <a
         href="{base}/"
         class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50"
-        class:text-[#B8860B]={$page.url.pathname === "/"}
-        class:text-white={$page.url.pathname !== "/"}>HOME</a
+        class:text-[#B8860B]={$page.url.pathname === `${base}/`}
+        class:text-white={$page.url.pathname !== `${base}/`}>HOME</a
       >
       <a
         href="{base}/ueber_mich"
         class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50"
-        class:text-[#B8860B]={$page.url.pathname === "/ueber_mich"}
-        class:text-white={$page.url.pathname !== "/ueber_mich"}>ÜBER MICH</a
+        class:text-[#B8860B]={$page.url.pathname === `${base}/ueber_mich`}
+        class:text-white={$page.url.pathname !== `${base}/ueber_mich`}
+        >ÜBER MICH</a
       >
       <a
         href="{base}/bildergalerie"
         class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50"
-        class:text-[#B8860B]={$page.url.pathname === "/bildergalerie"}
-        class:text-white={$page.url.pathname !== "/bildergalerie"}
+        class:text-[#B8860B]={$page.url.pathname === `${base}/bildergalerie`}
+        class:text-white={$page.url.pathname !== `${base}/bildergalerie`}
         >BILDERGALERIE</a
       >
       <a
         href="{base}/kontakt"
         class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50"
-        class:text-[#B8860B]={$page.url.pathname === "/kontakt"}
-        class:text-white={$page.url.pathname !== "/kontakt"}>KONTAKT</a
+        class:text-[#B8860B]={$page.url.pathname === `${base}/kontakt`}
+        class:text-white={$page.url.pathname !== `${base}/kontakt`}>KONTAKT</a
       >
     </nav>
   </div>
