@@ -26,7 +26,7 @@
 
     gsap.from(split.chars, {
       autoAlpha: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
       scale: 4,
       scrollTrigger: {
@@ -35,14 +35,14 @@
         once: true,
       },
       stagger: {
-        each: 0.08,
+        each: 0.06,
         from: "start",
       },
     });
   });
 </script>
 
-<div class="flex flex-col h-[100dvh]">
+<div class="flex flex-col h-[100dvh] w-full">
   <SectionWrapper>
     <div id="page" class="flex flex-col flex-1 mx-auto w-full pb-10 md:pb-14">
       <div
@@ -97,7 +97,7 @@
       darum sollte man die schönsten Momente festhalten!
     </p>
 
-    <div class="flex flex-col p-4 lg:px-40 mt-20 mx-auto w-full">
+    <div class="flex flex-col p-4 lg:px-40 mt-20 mx-auto w-full max-w-[2000px]">
       <div class="flex flex-col md:flex-row flex-wrap gap-10 justify-center">
         {#each angebote as angebot}
           <Card

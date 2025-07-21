@@ -8,25 +8,30 @@
   let menuOpen = false;
   let navRef;
 
-  function toggleMenu() {
+  function toggleMenu(event) {
+    event.stopPropagation(); // Impedisce la propagazione dell'evento
     menuOpen = !menuOpen;
+    console.log("toggle menu chiamato", menuOpen);
   }
 
   function handleClickOutside(event) {
     if (menuOpen && navRef && !navRef.contains(event.target)) {
       menuOpen = false;
+      console.log("Menu chiuso da click esterno");
     }
   }
 
   onMount(() => {
     if (browser) {
       document.addEventListener("click", handleClickOutside);
+      console.log("Event listener aggiunto");
     }
   });
 
   onDestroy(() => {
     if (browser) {
       document.removeEventListener("click", handleClickOutside);
+      console.log("Event listener rimosso");
     }
   });
 </script>
