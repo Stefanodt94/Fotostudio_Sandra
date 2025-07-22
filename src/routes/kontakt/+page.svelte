@@ -1,5 +1,17 @@
 <script>
   import { base } from "$app/paths";
+  import { onMount, tick } from "svelte";
+
+  onMount(async () => {
+    const { gsap } = await import("gsap");
+    await tick();
+
+    gsap.from("#page", {
+      autoAlpha: 0,
+      duration: 0.5,
+      ease: "expo.out",
+    });
+  });
 
   let formData = {
     name: "",
