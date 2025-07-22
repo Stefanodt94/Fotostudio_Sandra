@@ -32,6 +32,14 @@
   };
 </script>
 
+<svelte:head>
+  <title>Galerie – Sandra Fotostudio</title>
+  <meta
+    name="description"
+    content="Entdecke die schönsten Aufnahmen von Sandra – Hochzeiten, Porträts und mehr."
+  />
+</svelte:head>
+
 <svelte:window on:keydown={handleKey} />
 
 <main>

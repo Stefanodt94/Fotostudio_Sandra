@@ -216,7 +216,7 @@
                   href="mailto:info@sandra-fotostudio.de"
                   class="text-[#B8860B] hover:underline"
                 >
-                  info@sandra-fotostudio.de
+                  fotostudio-sandra@web.de
                 </a>
               </div>
             </div>
@@ -233,7 +233,7 @@
                   href="tel:+49123456789"
                   class="text-[#B8860B] hover:underline"
                 >
-                  +49 123 456 789
+                  09193/689474
                 </a>
               </div>
             </div>
@@ -247,14 +247,14 @@
               <div>
                 <h4 class="font-semibold text-gray-900">Adresse</h4>
                 <p class="text-gray-600">
-                  Musterstraße 123<br />
-                  12345 Musterstadt<br />
+                  Oswaldweg 2<br />
+                  91315 Höchstadt a. d. Aisch<br />
                   Deutschland
                 </p>
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
+            <!--  <div class="flex items-start space-x-4">
               <div
                 class="flex-shrink-0 w-12 h-12 bg-[#B8860B] rounded-full flex items-center justify-center"
               >
@@ -268,7 +268,7 @@
                   So: Nach Vereinbarung
                 </p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

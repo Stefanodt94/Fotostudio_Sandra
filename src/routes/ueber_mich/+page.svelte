@@ -35,6 +35,14 @@
   });
 </script>
 
+<svelte:head>
+  <title>Über mich – Sandra Fotostudio</title>
+  <meta
+    name="description"
+    content="Lerne Sandra kennen – Fotografin mit Leidenschaft und einem Auge fürs Detail."
+  />
+</svelte:head>
+
 <main>
   <SectionWrapper>
     <div

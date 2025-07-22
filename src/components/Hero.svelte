@@ -42,6 +42,14 @@
   });
 </script>
 
+<svelte:head>
+  <title>Sandra Fotostudio – Emotionale Fotografie für besondere Momente</title>
+  <meta
+    name="description"
+    content="Sandra Fotostudio – Professionelle Fotografie für Hochzeiten, Porträts, Familien und mehr. Buche jetzt dein Fotoshooting in Höchstadt und Umgebung."
+  />
+</svelte:head>
+
 <div class="flex flex-col h-[100dvh] w-full">
   <SectionWrapper>
     <div id="page" class="flex flex-col flex-1 mx-auto w-full pb-10 md:pb-14">
