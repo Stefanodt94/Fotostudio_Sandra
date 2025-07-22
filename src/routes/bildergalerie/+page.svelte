@@ -85,7 +85,7 @@
 
 {#if selectedImage}
   <div
-    class="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+    class="fixed inset-0 bg-black/80 flex items-center justify-center z-[1000]"
     on:click={closeImage}
     role="dialog"
     aria-modal="true"
