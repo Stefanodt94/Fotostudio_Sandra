@@ -1,26 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script>
-      function chiediPassword(retry = 3) {
-        while (retry > 0) {
-          const pw = prompt("Bitte Passwort eingeben:");
-          if (pw === "fotostudio-sandra") {
-            return true;
-          }
-          retry--;
-          alert(`Falsches Passwort. Verbleibende versuche: ${retry}`);
-        }
-        alert("Zugang verweigert");
-        return false;
-      }
-
-      if (!chiediPassword()) {
-        document.body.innerHTML =
-          "<h1 style='text-align:center;margin-top: 3rem;'>Zugang verweigert</h1>";
-        throw new Error("Zugang verweigert");
-      }
-    </script>
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,12 +20,12 @@
     
 		<link href="./_app/immutable/assets/0.7YCDAv4Z.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/5.DscDOxgC.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.Be7pz3hH.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DQgFO-yS.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.Ct6sQ_cr.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DeWfiYxq.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Dd1TZjzD.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/CgQsw0Sc.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/B3Qg2pLK.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.CX2qEwkF.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DnUfMJXy.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.BeElnNSG.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/DKe1jUWt.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/PGTEBdOs.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/DUlUMD95.js">
@@ -53,12 +33,12 @@
 		<link rel="modulepreload" href="./_app/immutable/chunks/CeG0xfVu.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/CjgN4h6v.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/CK0q3GSF.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.BFf0lM43.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.DKO8rppL.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/hHgKIxiL.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/BPvWkMq5.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/C-Cec4J2.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/ZrHj00C5.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/5.DkrbMtOZ.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/5.CGDNXx7h.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/CEgpYe12.js"><!--[--><meta name="description" content="Lerne Sandra kennen – Fotografin mit Leidenschaft und einem Auge fürs Detail."/><!--]--><title>Über mich – Sandra Fotostudio</title>
   </head>
   <body data-sveltekit-preload-data="hover" class="bg-color-[#FFFFFF]">
@@ -92,7 +72,7 @@
 			
 			<script>
 				{
-					__sveltekit_pv4t22 = {
+					__sveltekit_psmamv = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						assets: "/Fotostudio_Sandra"
 					};
@@ -100,8 +80,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.Be7pz3hH.js"),
-						import("./_app/immutable/entry/app.CX2qEwkF.js")
+						import("./_app/immutable/entry/start.Ct6sQ_cr.js"),
+						import("./_app/immutable/entry/app.BeElnNSG.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],
