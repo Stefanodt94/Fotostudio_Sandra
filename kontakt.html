@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      function chiediPassword(retry = 3) {
+        while (retry > 0) {
+          const pw = prompt("Bitte Passwort eingeben:");
+          if (pw === "fotostudio-sandra") {
+            return true;
+          }
+          retry--;
+          alert(`Falsches Passwort. Verbleibende versuche: ${retry}`);
+        }
+        alert("Zugang verweigert");
+        return false;
+      }
+
+      if (!chiediPassword()) {
+        document.body.innerHTML =
+          "<h1 style='text-align:center;margin-top: 3rem;'>Zugang verweigert</h1>";
+        throw new Error("Zugang verweigert");
+      }
+    </script>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link href="./_app/immutable/assets/0.7YCDAv4Z.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.YC6w1-fl.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DiU8qy4r.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Dd1TZjzD.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CgQsw0Sc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ClGkAc0s.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.DH44LdzF.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DKe1jUWt.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/PGTEBdOs.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DUlUMD95.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C-pdriqz.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CeG0xfVu.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CjgN4h6v.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CK0q3GSF.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.CdkM7x-X.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/hHgKIxiL.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BPvWkMq5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C-Cec4J2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ZrHj00C5.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.CjRKKFEg.js"><!--[--><meta name="description" content="Kontaktiere Sandra für professionelle Fotoshootings und Beratung"/><!--]--><title>Kontakt - Sandra Fotostudio</title>
+  </head>
+  <body data-sveltekit-preload-data="hover" class="bg-color-[#FFFFFF]">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="flex flex-col relative z-20 shadow-2xl"><div class="flex w-full items-center justify-between p-4 py-6 bg-black"><img src="./assets/logo_sandra.svg" alt="fotostudio-logo" class="w-60 h-auto"/> <button aria-label="menu-button" class="md:hidden grid place-items-center hover:text-[#B8860B] transition-colors duration-200 active:scale-[0.95] transition duration-50"><i class="fa-solid fa-bars text-white hover:text-[#B8860B] transition-colors duration-200"></i></button> <nav class="hidden md:flex items-center gap-4 lg:gap-6"><a href="./" class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50 text-white">HOME</a> <a href="./ueber_mich" class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50 text-white">ÜBER MICH</a> <a href="./bildergalerie" class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50 text-white">BILDERGALERIE</a> <a href="./kontakt" class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50 text-white">KONTAKT</a></nav></div> <nav id="mobile-nav" class="absolute top-full right-0 w-3/4 max-w-xs bg-black z-50 flex flex-col p-4 gap-4 items-center transition-transform duration-300 ease-in-out translate-x-full"><a href="./" class="text-white hover:text-[#B8860B] active:scale-95 py-4 transition-all duration-200">HOME</a> <a href="./ueber_mich" class="text-white hover:text-[#B8860B] active:scale-95 py-4 transition-all duration-200">ÜBER MICH</a> <a href="./bildergalerie" class="text-white hover:text-[#B8860B] active:scale-95 py-4 transition-all duration-200">BILDERGALERIE</a> <a href="./kontakt" class="text-white hover:text-[#B8860B] active:scale-95 py-4 transition-all duration-200">KONTAKT</a></nav><!----></header><!----> <main id="page"><!----><!----><main class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100"><section class="relative bg-black text-white py-20 px-4"><div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60"></div> <div class="relative max-w-4xl mx-auto text-center"><h1 class="title text-7xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white to-[#B8860B] bg-clip-text text-transparent">Kontakt</h1> <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">Lass uns deine Vision zum Leben erwecken. Ich freue mich darauf, von dir
+        zu hören!</p></div></section> <div class="max-w-7xl mx-auto px-4 py-16"><div class="grid lg:grid-cols-2 gap-16"><div class="bg-white rounded-2xl shadow-2xl p-8 lg:p-12"><h2 class="text-3xl font-bold text-gray-900 mb-8">Schreib mir eine Nachricht</h2> <form class="space-y-6"><div class="grid md:grid-cols-2 gap-6"><div><label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Name *</label> <input type="text" id="name" value="" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#B8860B] focus:border-transparent transition-all duration-200" placeholder="Dein Name"/></div> <div><label for="email" class="block text-sm font-semibold text-gray-700 mb-2">E-Mail *</label> <input type="email" id="email" value="" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#B8860B] focus:border-transparent transition-all duration-200" placeholder="deine@email.com"/></div></div> <div class="grid md:grid-cols-2 gap-6"><div><label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Telefon</label> <input type="tel" id="phone" value="" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#B8860B] focus:border-transparent transition-all duration-200" placeholder="+49 123 456789"/></div> <div><label for="service" class="block text-sm font-semibold text-gray-700 mb-2">Service</label> <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#B8860B] focus:border-transparent transition-all duration-200"><option value="" selected>Service auswählen</option><option value="portrait">Portrait Shooting</option><option value="wedding">Hochzeit</option><option value="family">Familie</option><option value="business">Business</option><option value="event">Event</option><option value="other">Sonstiges</option></select></div></div> <div><label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Nachricht *</label> <textarea id="message" required rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#B8860B] focus:border-transparent transition-all duration-200 resize-vertical" placeholder="Erzähl mir von deiner Vision..."></textarea></div> <button type="submit" class="w-full bg-gradient-to-r from-[#B8860B] to-[#DAA520] text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg disabled:opacity-50 disabled:scale-100 disabled:cursor-not-allowed"><!--[!-->Nachricht senden<!--]--></button> <!--[!--><!--]--></form></div> <div class="space-y-8"><div class="bg-white rounded-2xl shadow-2xl p-8"><h3 class="text-2xl font-bold text-gray-900 mb-6">Kontaktinformationen</h3> <div class="space-y-6"><div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 bg-[#B8860B] rounded-full flex items-center justify-center"><i class="fas fa-envelope text-white text-lg"></i></div> <div><h4 class="font-semibold text-gray-900">E-Mail</h4> <a href="mailto:info@sandra-fotostudio.de" class="text-[#B8860B] hover:underline">fotostudio-sandra@web.de</a></div></div> <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 bg-[#B8860B] rounded-full flex items-center justify-center"><i class="fas fa-phone text-white text-lg"></i></div> <div><h4 class="font-semibold text-gray-900">Telefon</h4> <a href="tel:+49123456789" class="text-[#B8860B] hover:underline">09193/689474</a></div></div> <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 bg-[#B8860B] rounded-full flex items-center justify-center"><i class="fas fa-map-marker-alt text-white text-lg"></i></div> <div><h4 class="font-semibold text-gray-900">Adresse</h4> <p class="text-gray-600">Oswaldweg 2<br/> 91315 Höchstadt a. d. Aisch<br/> Deutschland</p></div></div></div></div></div></div></div></main><!----><!----></main> <footer><div class="flex flex-col mx-auto items-center md:justify-evenly md:flex-row bg-black w-full p-10 gap-10"><div class="flex flex-col text-center"><a class="text-white text-extralight tracking-widest hover:text-[#B8860B] transition duration-200" href="./">Impressum</a> <a class="text-white text-extralight tracking-widest hover:text-[#B8860B] transition duration-200" href="./">Datenschutz und AGB</a></div> <div class="flex flex-col text-white md:ml-10"><p>© 2025 Fotostudio Sandra</p> <p>Alle Rechte vorbehalten</p></div> <div class="flex flex-row md:ml-10 gap-10 py-4"><i class="fa-brands fa-square-facebook fa-2xl text-white/90 hover:text-[#B8860B] transition duration-200 cursor-pointer"></i> <i class="fa-brands fa-instagram fa-2xl text-white/90 hover:text-[#B8860B] transition duration-200 cursor-pointer"></i> <i class="fa-brands fa-linkedin fa-2xl text-white/90 hover:text-[#B8860B] transition duration-200 cursor-pointer"></i></div></div></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_3xh7x6 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/Fotostudio_Sandra"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.YC6w1-fl.js"),
+						import("./_app/immutable/entry/app.DH44LdzF.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

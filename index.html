@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      function chiediPassword(retry = 3) {
+        while (retry > 0) {
+          const pw = prompt("Bitte Passwort eingeben:");
+          if (pw === "fotostudio-sandra") {
+            return true;
+          }
+          retry--;
+          alert(`Falsches Passwort. Verbleibende versuche: ${retry}`);
+        }
+        alert("Zugang verweigert");
+        return false;
+      }
+
+      if (!chiediPassword()) {
+        document.body.innerHTML =
+          "<h1 style='text-align:center;margin-top: 3rem;'>Zugang verweigert</h1>";
+        throw new Error("Zugang verweigert");
+      }
+    </script>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link href="./_app/immutable/assets/0.7YCDAv4Z.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.YC6w1-fl.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DiU8qy4r.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Dd1TZjzD.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CgQsw0Sc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ClGkAc0s.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.DH44LdzF.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DKe1jUWt.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/PGTEBdOs.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DUlUMD95.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C-pdriqz.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CeG0xfVu.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CjgN4h6v.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CK0q3GSF.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.CdkM7x-X.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/hHgKIxiL.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BPvWkMq5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C-Cec4J2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ZrHj00C5.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.A2J2P5y8.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Db1XTC5q.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CEgpYe12.js"><!--[--><meta name="description" content="Sandra Fotostudio – Professionelle Fotografie für Hochzeiten, Porträts, Familien und mehr. Buche jetzt dein Fotoshooting in Höchstadt und Umgebung."/><!--]--><title>Sandra Fotostudio – Emotionale Fotografie für besondere Momente</title>
+  </head>
+  <body data-sveltekit-preload-data="hover" class="bg-color-[#FFFFFF]">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="flex flex-col relative z-20 shadow-2xl"><div class="flex w-full items-center justify-between p-4 py-6 bg-black"><img src="./assets/logo_sandra.svg" alt="fotostudio-logo" class="w-60 h-auto"/> <button aria-label="menu-button" class="md:hidden grid place-items-center hover:text-[#B8860B] transition-colors duration-200 active:scale-[0.95] transition duration-50"><i class="fa-solid fa-bars text-white hover:text-[#B8860B] transition-colors duration-200"></i></button> <nav class="hidden md:flex items-center gap-4 lg:gap-6"><a href="./" class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50 text-white">HOME</a> <a href="./ueber_mich" class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50 text-white">ÜBER MICH</a> <a href="./bildergalerie" class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50 text-white">BILDERGALERIE</a> <a href="./kontakt" class="duration-200 hover:text-[#B8860B] cursor-pointer active:scale-[0.95] transition duration-50 text-white">KONTAKT</a></nav></div> <nav id="mobile-nav" class="absolute top-full right-0 w-3/4 max-w-xs bg-black z-50 flex flex-col p-4 gap-4 items-center transition-transform duration-300 ease-in-out translate-x-full"><a href="./" class="text-white hover:text-[#B8860B] active:scale-95 py-4 transition-all duration-200">HOME</a> <a href="./ueber_mich" class="text-white hover:text-[#B8860B] active:scale-95 py-4 transition-all duration-200">ÜBER MICH</a> <a href="./bildergalerie" class="text-white hover:text-[#B8860B] active:scale-95 py-4 transition-all duration-200">BILDERGALERIE</a> <a href="./kontakt" class="text-white hover:text-[#B8860B] active:scale-95 py-4 transition-all duration-200">KONTAKT</a></nav><!----></header><!----> <main id="page"><!----><!----><div class="flex flex-col h-[100dvh] w-full"><section class="min-h-screen flex flex-col"><div class="flex flex-col flex-1 mx-auto w-full"><!----><div id="page" class="flex flex-col flex-1 mx-auto w-full pb-10 md:pb-14"><div class="relative flex flex-col flex-1 mx-auto h-[40vh] sm:h-[50vh] md:min-h-64 lg:h-auto w-full items-center justify-center backdrop-blur-sm overflow-hidden"><img src="./assets/camera.webp" alt="Camera Background" class="bild absolute inset-0 object-cover w-full h-full z-[-1]" loading="eager"/> <div class="flex flex-col justify-center bg-black/70 border-2 border-white rounded w-11/12 sm:w-3/4 md:w-1/2 h-[50vh] mx-auto shadow-lg p-4"><span class="flex flex-col flex-1 justify-center mx-auto"><h1 class="text-white text-3xl md:text-4xl lg:text-6xl text-center justify-center tracking-widest überschrift">Fotostudio<br/><span class="block mt-10">Sandra</span></h1></span></div></div></div><!----></div></section><!----></div> <section class="min-h-screen flex flex-col"><div class="flex flex-col flex-1 mx-auto w-full"><!----><div class="flex flex-col mx-auto w-full h-[50dvh] pb-16 pt-12"><h2 class="sandra text-black text-4xl md:text-5xl lg:text-7xl text-center tracking-widest font-extralight m-auto">Sandra Seibert<br/><span class="text-black text-xl md:text-2xl lg:text-3xl mx-auto">Fotografin</span></h2></div> <div class="flex flex-col mx-auto w-full justify-center items-center shadow-inner pt-15 pb-5 md:pt-20 pb-20 lg:pt-30 pb-30 bg-cover bg-center" style="background-image: url(./assets/bg3.png)"><h3 class="text-white text-6xl md:text-8xl lg:10xl text-center p-4 erinnerung">Jede Erinnerung ist <span class="wertvoll text-[#B8860B]">wertvoll</span><span class="dots">...</span></h3> <p class="text-white text-center font-light text-2xl md:4xl lg:6xl tracking-widest p-4">darum sollte man die schönsten Momente festhalten!</p> <div class="flex flex-col p-4 lg:px-40 mt-20 mx-auto w-full max-w-[2000px]"><div class="flex flex-col md:flex-row flex-wrap gap-10 justify-center"><!--[--><div class="flex flex-col w-full"><div class="flex flex-col md:flex-row w-full"><div class="flex w-full md:w-80 lg:w-120 h-96"><img src="./assets/galerie/bild42.jpg" alt="Kinder - und Familienfotos" class="w-full h-full object-cover"/></div> <div class="flex flex-col flex-1 p-4 bg-black/60"><h3 class="text-4xl mb-2 md:text-5xl mb-2 karte text-white my-auto text-center">Kinder - und Familienfotos</h3> <div class="flex mx-auto my-auto h-[1px] w-[50%] bg-white"></div> <p class="text-white text-center text-xl text-4xl tracking-widest font-extralight my-auto mt-2">Die schönsten Erinnerungen entstehen im Kreise der Familie. Lass uns die besonderen Augenblicke eures gemeinsamen Lebens festhalten.</p></div></div></div><div class="flex flex-col w-full"><div class="flex flex-col md:flex-row w-full"><div class="flex w-full md:w-80 lg:w-120 h-96"><img src="./assets/galerie/bild58.jpg" alt="Hochzeiten" class="w-full h-full object-cover"/></div> <div class="flex flex-col flex-1 p-4 bg-black/60"><h3 class="text-4xl mb-2 md:text-5xl mb-2 karte text-white my-auto text-center">Hochzeiten</h3> <div class="flex mx-auto my-auto h-[1px] w-[50%] bg-white"></div> <p class="text-white text-center text-xl text-4xl tracking-widest font-extralight my-auto mt-2">Ein Tag voller Liebe und Emotionen. Halte die unvergesslichen Momente eures großen Tages in zeitlosen Bildern fest.</p></div></div></div><div class="flex flex-col w-full"><div class="flex flex-col md:flex-row w-full"><div class="flex w-full md:w-80 lg:w-120 h-96"><img src="./assets/bild45.jpg" alt="Babybauch" class="w-full h-full object-cover"/></div> <div class="flex flex-col flex-1 p-4 bg-black/60"><h3 class="text-4xl mb-2 md:text-5xl mb-2 karte text-white my-auto text-center">Babybauch</h3> <div class="flex mx-auto my-auto h-[1px] w-[50%] bg-white"></div> <p class="text-white text-center text-xl text-4xl tracking-widest font-extralight my-auto mt-2">Die Vorfreude auf das Wunder des Lebens. Halte die Magie der Schwangerschaft in zeitlosen Bildern fest.</p></div></div></div><div class="flex flex-col w-full"><div class="flex flex-col md:flex-row w-full"><div class="flex w-full md:w-80 lg:w-120 h-96"><img src="./assets/bild33.jpg" alt="Newborn" class="w-full h-full object-cover"/></div> <div class="flex flex-col flex-1 p-4 bg-black/60"><h3 class="text-4xl mb-2 md:text-5xl mb-2 karte text-white my-auto text-center">Newborn</h3> <div class="flex mx-auto my-auto h-[1px] w-[50%] bg-white"></div> <p class="text-white text-center text-xl text-4xl tracking-widest font-extralight my-auto mt-2">Willkommen im Leben, kleiner Schatz. Die ersten Momente sind die kostbarsten. Lass uns diese unvergesslichen Augenblicke festhalten.</p></div></div></div><div class="flex flex-col w-full"><div class="flex flex-col md:flex-row w-full"><div class="flex w-full md:w-80 lg:w-120 h-96"><img src="./assets/bild59.jpg" alt="Portraits/Beauty" class="w-full h-full object-cover"/></div> <div class="flex flex-col flex-1 p-4 bg-black/60"><h3 class="text-4xl mb-2 md:text-5xl mb-2 karte text-white my-auto text-center">Portraits/Beauty</h3> <div class="flex mx-auto my-auto h-[1px] w-[50%] bg-white"></div> <p class="text-white text-center text-xl text-4xl tracking-widest font-extralight my-auto mt-2">Zeige dein wahres Ich. Schönheit in jedem Detail. Lass uns deine Persönlichkeit in strahlenden Portraits einfangen.</p></div></div></div><div class="flex flex-col w-full"><div class="flex flex-col md:flex-row w-full"><div class="flex w-full md:w-80 lg:w-120 h-96"><img src="./assets/bild46.jpg" alt="Kindergarten" class="w-full h-full object-cover"/></div> <div class="flex flex-col flex-1 p-4 bg-black/60"><h3 class="text-4xl mb-2 md:text-5xl mb-2 karte text-white my-auto text-center">Kindergarten</h3> <div class="flex mx-auto my-auto h-[1px] w-[50%] bg-white"></div> <p class="text-white text-center text-xl text-4xl tracking-widest font-extralight my-auto mt-2">Die ersten Schritte in die Welt! Feiere die Neugier und den Spaß der Kindergartenzeit mit lebendigen Fotos.</p></div></div></div><!--]--></div></div> <a class="my-auto text-white tracking-widest text-lg md:text-xl lg:text-2xl bg-transparent rounded border border-[#B8860B] hover:bg-[#B8860B] active:scale-[0.95] transition duration-100 p-4 cursor-pointer shadow-xl hover:shadow-2xl cursor-pointer mt-[5%]" href="./bildergalerie">Zur Bildergalerie</a></div> <div class="flex flex-col flex-1 items-center"><h4 class="text-[#B8860B] font-extralight tracking-widest text-2xl pb-10 md:text-4xl pt-15 lg:text-6xl pt-25 pb-25 text-center">WEITERE LEISTUNGEN</h4></div> <div class="flex flex-col mx-auto w-full items-center bg-center bg-cover py-20" style="background-image: url('./assets/background.png')"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-10 p-6"><!--[--><button class="flex flex-col mx-auto border-white border rounded min-w-[300px] lg:w-96 p-10 transition duration-200 hover:scale-[1.05] hover:shadow-2xl hover:bg-white/10 cursor-pointer"><p class="text-white tracking-widest font-extralight tetx-lg md:text-xl lg:text-2xl text-center">PASSFOTOS</p></button><button class="flex flex-col mx-auto border-white border rounded min-w-[300px] lg:w-96 p-10 transition duration-200 hover:scale-[1.05] hover:shadow-2xl hover:bg-white/10 cursor-pointer"><p class="text-white tracking-widest font-extralight tetx-lg md:text-xl lg:text-2xl text-center">BEWERBUNGSFOTOS</p></button><button class="flex flex-col mx-auto border-white border rounded min-w-[300px] lg:w-96 p-10 transition duration-200 hover:scale-[1.05] hover:shadow-2xl hover:bg-white/10 cursor-pointer"><p class="text-white tracking-widest font-extralight tetx-lg md:text-xl lg:text-2xl text-center">EINSCHULUNG</p></button><button class="flex flex-col mx-auto border-white border rounded min-w-[300px] lg:w-96 p-10 transition duration-200 hover:scale-[1.05] hover:shadow-2xl hover:bg-white/10 cursor-pointer"><p class="text-white tracking-widest font-extralight tetx-lg md:text-xl lg:text-2xl text-center">TAUFE</p></button><button class="flex flex-col mx-auto border-white border rounded min-w-[300px] lg:w-96 p-10 transition duration-200 hover:scale-[1.05] hover:shadow-2xl hover:bg-white/10 cursor-pointer"><p class="text-white tracking-widest font-extralight tetx-lg md:text-xl lg:text-2xl text-center">KOMMUNION</p></button><button class="flex flex-col mx-auto border-white border rounded min-w-[300px] lg:w-96 p-10 transition duration-200 hover:scale-[1.05] hover:shadow-2xl hover:bg-white/10 cursor-pointer"><p class="text-white tracking-widest font-extralight tetx-lg md:text-xl lg:text-2xl text-center">KONFIRMATION</p></button><!--]--></div> <div class="flex flex-col py-10"><a class="text-white text-lg md:text-xl lg:text-2xl bg-transparent rounded border border-[#B8860B] hover:bg-[#B8860B] active:scale-[0.95] transition duration-200 p-4 cursor-pointer shadow-xl hover:shadow-2xl" href="./kontakt"><i class="fa-solid fa-phone pl-2 pr-2"></i>Termin vereinbaren</a></div> <span class="text-white text-l md:text-xl lg:text-2xl p-10 text-center">HINWEIS: Aufgrund der neuen Passbildverordnung ab 1. Mai 2025 werden <strong>keine</strong> biometrischen Passbilder für Personalausweis und Reisepass
+      mehr angeboten.</span></div><!----></div></section><!----><!----><!----></main> <footer><div class="flex flex-col mx-auto items-center md:justify-evenly md:flex-row bg-black w-full p-10 gap-10"><div class="flex flex-col text-center"><a class="text-white text-extralight tracking-widest hover:text-[#B8860B] transition duration-200" href="./">Impressum</a> <a class="text-white text-extralight tracking-widest hover:text-[#B8860B] transition duration-200" href="./">Datenschutz und AGB</a></div> <div class="flex flex-col text-white md:ml-10"><p>© 2025 Fotostudio Sandra</p> <p>Alle Rechte vorbehalten</p></div> <div class="flex flex-row md:ml-10 gap-10 py-4"><i class="fa-brands fa-square-facebook fa-2xl text-white/90 hover:text-[#B8860B] transition duration-200 cursor-pointer"></i> <i class="fa-brands fa-instagram fa-2xl text-white/90 hover:text-[#B8860B] transition duration-200 cursor-pointer"></i> <i class="fa-brands fa-linkedin fa-2xl text-white/90 hover:text-[#B8860B] transition duration-200 cursor-pointer"></i></div></div></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_3xh7x6 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/Fotostudio_Sandra"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.YC6w1-fl.js"),
+						import("./_app/immutable/entry/app.DH44LdzF.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
