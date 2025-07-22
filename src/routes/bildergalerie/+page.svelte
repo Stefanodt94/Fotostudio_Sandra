@@ -18,7 +18,7 @@
   let selectedImage = null;
 
   const openImage = (img) => {
-    selectedImage = img;
+    selectedImage = `${base}${img}`;
   };
 
   const closeImage = () => {
